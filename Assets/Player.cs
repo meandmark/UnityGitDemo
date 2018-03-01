@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    float speed;
-
 	// Use this for initialization
 	void Start () {
-        speed = 10.0f;
+        
 	}
 	
 	// Update is called once per frame
@@ -17,7 +15,8 @@ public class Player : MonoBehaviour {
 	}
 
 	public void Move() {
-		float xMovement = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
+        float speed = 10.0f;
+        float xMovement = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
         transform.Translate(Vector3.right * xMovement);
 
         float yMovement = speed * Input.GetAxis("Vertical") * Time.deltaTime;
